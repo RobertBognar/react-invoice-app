@@ -1,0 +1,136 @@
+@import '../../variables';
+
+@mixin breakpoint850 {
+    @media (max-width: #{$breakPoint850}) {
+        @content;
+    }
+}
+
+@mixin breakpoint500 {
+    @media (max-width: #{$breakPoint500}) {
+        @content;
+    }
+}
+
+//Header Container Styling
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 103px;
+    height: 100vh;
+    background: $colorFour;
+    border-radius: 0 $common20 $common20 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 200;
+    @include breakpoint850() {
+        width: 100vw;
+        height: $common80;
+        border-radius: 0;
+        flex-direction: row;
+    }
+    @include breakpoint500() {
+        height: $common72;
+    }
+}
+
+//Logo Style Container
+.logo {
+    width: 103px;
+    height: 103px;
+    background: $colorOne;
+    border-radius: 0 $common20 $common20 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+        left: 0;
+        background: $colorTwo;
+        border-radius: $common20 0 0 0;
+        z-index: -1; 
+    }
+    @include breakpoint850() {
+        width: $common80;
+        height: $common80;
+    }
+    @include breakpoint500() {
+        width: $common72;
+        height: $common72;
+    }
+}
+
+.logoImg {
+    width: 44px;
+    @include breakpoint850() {
+        width: 31px;
+    }
+}
+
+//Button Styling Container
+.modeUser {
+    @include breakpoint850() {
+        display: flex;
+    }
+}
+
+.mode, .userPhoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    @include breakpoint850() {
+        height: initial;
+        width: 100px;
+    }
+    @include breakpoint500() {
+        width: 75px;
+    }
+}
+
+.mode {
+    border-bottom: $common2 solid $borderColorOne;
+    & button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            path {
+                fill: $colorFive;
+            }
+        }
+        & path {
+            transition: 0.3s; 
+        }
+    }
+    @include breakpoint850() {
+        border: none;
+        border-right: $common2 solid $borderColorOne;
+    }
+}
+
+//Photo Avatar Container Styling
+.photo {
+    width: $common40;
+    height: $common40;
+    border-radius: 50%;
+    overflow: hidden;
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+    @include breakpoint850() {
+        width: $common32;
+        height: $common32;
+    }
+}

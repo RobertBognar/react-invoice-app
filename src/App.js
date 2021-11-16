@@ -1,11 +1,21 @@
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
+
+import Header from './Components/Header/Header';
+import { GlobalStorage } from './Context/GlobalMode';
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
+      <GlobalStorage>
+        <Header />
+        <main>
+          <Routes>
 
-    </div>
+          </Routes>
+        </main>
+      </GlobalStorage>
+    </BrowserRouter>
   );
 }
 
