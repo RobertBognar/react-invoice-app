@@ -1,0 +1,46 @@
+.NoResult {
+  max-width: 230px;
+  text-align: center;
+  margin-top: 128px;
+}
+
+@media (max-width: 600px) {
+  .NoResult {
+    margin-top: 64px;
+  }
+}
+
+.NoResult h2 {
+  color: #1e2139;
+  margin-top: 64px;
+}
+
+@media (max-width: 600px) {
+  .NoResult h2 {
+    margin-top: 40px;
+  }
+}
+
+.NoResult p {
+  margin-top: 24px;
+  color: #888eb0;
+}
+
+@media (max-width: 600px) {
+  .NoResult p {
+    margin-top: 16px;
+  }
+}
+
+.NoResult p span {
+  font-weight: 700;
+}
+
+.NoResult.Dark h2 {
+  color: #fefefe;
+}
+
+.NoResult.Dark p {
+  color: #dfe3fa;
+}
+/*# sourceMappingURL=NoResult.module.css.map */

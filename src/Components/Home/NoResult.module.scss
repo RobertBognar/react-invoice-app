@@ -1,0 +1,45 @@
+@import '../../variables';
+
+//Import Mixins Breakpoint For Responsivnes
+
+@mixin breakpoint600 {
+    @media (max-width: #{$breakPoint600}) {
+        @content;
+    }
+}
+
+.NoResult {
+    max-width: 230px;
+    text-align: center;
+    margin-top: 128px;
+    @include breakpoint600() {
+        margin-top: $common64;
+    }
+}
+.NoResult h2 {
+    color: $colorThree;
+    margin-top: $common64;
+    @include breakpoint600() {
+        margin-top: $common40;
+    }
+}
+  
+.NoResult p {
+    margin-top: $common24;
+    color: $colorSix;
+    @include breakpoint600() {
+        margin-top: $common16;
+    }
+}
+
+.NoResult p span {
+    font-weight: $weight700;
+}
+  
+.NoResult.Dark h2 {
+    color: $basicWhite;
+}
+
+.NoResult.Dark p {
+    color: $colorFive;
+}

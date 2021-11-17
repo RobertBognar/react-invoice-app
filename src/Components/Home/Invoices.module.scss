@@ -1,0 +1,139 @@
+@import '../../variables';
+
+//Import Mixins Breakpoint For Responsivnes
+
+@mixin breakpoint600 {
+    @media (max-width: #{$breakPoint600}) {
+        @content;
+    }
+}
+
+//Global Invoices
+.Invoices {
+    width: 100%;
+    margin-top: 64px;
+    & a {
+        text-decoration: none;
+        color: $colorEight;
+    }
+    @include breakpoint600() {
+        margin-top: 96px;
+    }
+  }
+  
+  .Invoice {
+    background: $basicWhite;
+    box-shadow: 0px $common10 $common10 -5px $darkModeBoxShadow;
+    border-radius: $common8;
+    padding: $common18 $common20 $common18 $common32;
+    border: $common1 solid transparent;
+    transition: 0.3s;
+    margin-bottom: $common16;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr 1.5fr 1.5fr $common20;
+    align-items: center;
+    gap: 6px;
+    &:hover {
+        border-color: $colorOne;
+    }
+    .InfoId {
+        & span {
+            color: $colorSeven;
+        }
+    }
+    .InfoDate, .InfoName {
+        color: $colorSix;
+    }
+    .InfoDate, .InfoName, .InfoPrice {
+        overflow: hidden;
+    }
+    .InfoPrice h3, .InfoDate p, .InfoName p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .InfoStatusContent, .InfoPrice, .InfoArrow {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .InfoPrice {
+        @include breakpoint600() {
+            justify-content: flex-start;
+            color: $colorEight;
+        }
+    }
+    .InfoName {
+        @include breakpoint600() {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    .InfoName, .InfoId {
+        @include breakpoint600() {
+            margin-bottom: $common16;
+        }
+    }
+    .InfoId {
+        @include breakpoint600() {
+            grid-area: id;
+        }
+    }
+    .InfoDate {
+        @include breakpoint600() {
+            grid-area: date;
+        }
+    }
+    .InfoName {
+        @include breakpoint600() {
+            grid-area: name;
+        }
+    }
+    .InfoPrice {
+        @include breakpoint600() {
+            grid-area: price;
+        }
+    }
+    .InfoStatusContent {
+        @include breakpoint600() {
+            grid-area: status;
+        }
+    }
+    .InfoArrow {
+        @include breakpoint600() {
+            display: none;
+        }
+    }
+    @include breakpoint600() {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+          "id name"
+          "date status"
+          "price status";
+        gap: initial;
+        padding: 1.5rem;
+    }
+  }
+  
+  /*  DARK MODE INVOICE CONTAINER  */
+  
+  .Dark .Invoice {
+    background-color: $colorThree;
+    box-shadow: 0px $common10 $common10 -10px $darkModeBoxShadow;
+    border-radius: $common8;
+  }
+  
+  .Dark .InfoId h4 {
+    color: $basicWhite;
+  }
+  
+  .Dark .InfoDate p {
+    color: $colorFive;
+  }
+  .Dark .InfoName {
+    color: $basicWhite;
+  }
+  .Dark .InfoPrice h3 {
+    color: $basicWhite;
+  }

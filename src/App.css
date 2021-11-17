@@ -7,4 +7,81 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+body {
+  font-family: "Spartan", sans-serif;
+  background-color: #f8f8fb;
+}
+
+body.dark {
+  background-color: #141625;
+}
+
+.container {
+  max-width: 730px;
+}
+
+main {
+  min-height: 110vh;
+  margin-left: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+}
+
+@media (max-width: 850px) {
+  main {
+    margin: 64px 48px 0px 48px;
+  }
+}
+
+@media (max-width: 425px) {
+  main {
+    margin: 64px 24px 0px 24px;
+  }
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.63px;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.8px;
+}
+
+h4 {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+}
+
+p {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+}
+
+p.text2 {
+  font-size: 11px;
+  line-height: 18px;
+  letter-spacing: -0.23px;
+}
 /*# sourceMappingURL=App.css.map */

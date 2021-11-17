@@ -1,0 +1,167 @@
+.Invoices {
+  width: 100%;
+  margin-top: 64px;
+}
+
+.Invoices a {
+  text-decoration: none;
+  color: #0c0e16;
+}
+
+@media (max-width: 600px) {
+  .Invoices {
+    margin-top: 96px;
+  }
+}
+
+.Invoice {
+  background: #fefefe;
+  -webkit-box-shadow: 0px 10px 10px -5px rgba(72, 84, 159, 0.1);
+          box-shadow: 0px 10px 10px -5px rgba(72, 84, 159, 0.1);
+  border-radius: 8px;
+  padding: 18px 20px 18px 32px;
+  border: 1px solid transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-bottom: 16px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5fr 1.5fr 1.5fr 1.5fr 20px;
+      grid-template-columns: 1fr 1.5fr 1.5fr 1.5fr 1.5fr 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+
+.Invoice:hover {
+  border-color: #7c5dfa;
+}
+
+.Invoice .InfoId span {
+  color: #7e88c3;
+}
+
+.Invoice .InfoDate, .Invoice .InfoName {
+  color: #888eb0;
+}
+
+.Invoice .InfoDate, .Invoice .InfoName, .Invoice .InfoPrice {
+  overflow: hidden;
+}
+
+.Invoice .InfoPrice h3, .Invoice .InfoDate p, .Invoice .InfoName p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Invoice .InfoStatusContent, .Invoice .InfoPrice, .Invoice .InfoArrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 600px) {
+  .Invoice .InfoPrice {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    color: #0c0e16;
+  }
+}
+
+@media (max-width: 600px) {
+  .Invoice .InfoName {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .Invoice .InfoName, .Invoice .InfoId {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Invoice .InfoId {
+    grid-area: id;
+  }
+}
+
+@media (max-width: 600px) {
+  .Invoice .InfoDate {
+    grid-area: date;
+  }
+}
+
+@media (max-width: 600px) {
+  .Invoice .InfoName {
+    grid-area: name;
+  }
+}
+
+@media (max-width: 600px) {
+  .Invoice .InfoPrice {
+    grid-area: price;
+  }
+}
+
+@media (max-width: 600px) {
+  .Invoice .InfoStatusContent {
+    grid-area: status;
+  }
+}
+
+@media (max-width: 600px) {
+  .Invoice .InfoArrow {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .Invoice {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "id name" "date status" "price status";
+    gap: initial;
+    padding: 1.5rem;
+  }
+}
+
+/*  DARK MODE INVOICE CONTAINER  */
+.Dark .Invoice {
+  background-color: #1e2139;
+  -webkit-box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.1);
+          box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.1);
+  border-radius: 8px;
+}
+
+.Dark .InfoId h4 {
+  color: #fefefe;
+}
+
+.Dark .InfoDate p {
+  color: #dfe3fa;
+}
+
+.Dark .InfoName {
+  color: #fefefe;
+}
+
+.Dark .InfoPrice h3 {
+  color: #fefefe;
+}
+/*# sourceMappingURL=Invoices.module.css.map */

@@ -4,9 +4,9 @@ export const GlobalContext = React.createContext();
 
 export const GlobalStorage = ({ children }) => {
   const [mode, setMode] = React.useState(() => {
-    const mode = window.localStorage.getItem("mode");
+    const mode = window.localStorage.getItem('mode');
 
-    if (mode && mode === "dark") return true;
+    if (mode && mode === 'dark') return true;
     else return false;
   });
 

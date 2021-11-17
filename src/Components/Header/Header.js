@@ -1,18 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './Header.css';
 
 import logo from '../../Assets/logo.svg';
-import { ReactComponent as Moon } from "../../Assets/icon-moon.svg";
-import { ReactComponent as Sun } from "../../Assets/icon-sun.svg";
-import user from "../../Assets/image-avatar.jpg";
+import { ReactComponent as Moon } from '../../Assets/icon-moon.svg';
+import { ReactComponent as Sun } from '../../Assets/icon-sun.svg';
+import user from '../../Assets/image-avatar.jpg';
 
 import { GlobalContext } from '../../Context/GlobalMode';
 
 //Global Container For Side Header
 const Header = () => {
     const global = React.useContext(GlobalContext);
+
+    //Toggle Switch Mode Function Passing To Button Below
+    //Setting Up localStorage To Save Switch State
+    function toggleModeSwitch() {
+        global.setMode((mode) => {
+            window.localStorage.setItem('mode', mode ? 'light' : 'dark');
+            return !mode;
+        });
+    }
 
     return (
         <header className="header">
@@ -21,11 +30,10 @@ const Header = () => {
                     <img src={logo} alt="Logo" className="logoImg" />
                 </Link>
             </div>
-
             <div className="modeUser">
                 <div className="mode">
                     <button
-                    //Blank Space, Need To Add On Click Toggle Dark/Light Mode
+                        onClick={toggleModeSwitch}
                     >
                         {global.mode ? (
                             <span>

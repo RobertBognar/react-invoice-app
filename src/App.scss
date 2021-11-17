@@ -1,4 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+@import './variables';
+
+//Mixins For Responsivnes
+@mixin breakpoint850 {
+  @media (max-width: #{$breakPoint850}) {
+    @content;
+  }
+}
+
+@mixin breakpoint425 {
+  @media (max-width: #{$breakpoint425}) {
+      @content;
+  }
+}
 
 *,
 *::after,
@@ -8,6 +22,67 @@
   box-sizing: border-box;
 }
 
+//Global Body Container & Main
 body {
-    font-family: $family;
+  font-family: $family;
+  background-color: $colorEleven;
+  &.dark {
+    background-color: $colorTwelve;
+  }
+}
+
+.container {
+  max-width: 730px;
+}
+
+main {
+  min-height: 110vh;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  @include breakpoint850() {
+    margin: $common64 $common48 $common0 $common48;
+  }
+  @include breakpoint425() {
+    margin: $common64 $common24 $common0 $common24;
+  }
+}
+
+//Typography Styles & Sizes
+
+h1 {
+  font-size: $common32;
+  line-height: $common36;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: $common20;
+  line-height: $common22;
+  letter-spacing: -0.63px;
+}
+
+h3 {
+  font-size: $common16;
+  line-height: $common24;
+  letter-spacing: -0.8px;
+}
+
+h4 { 
+  font-size: $common12;
+  line-height: $common15;
+  letter-spacing: -0.25px;
+}
+
+p {
+  font-size: $common12;
+  line-height: $common15;
+  letter-spacing: -0.25px;
+  &.text2 {
+    font-size: $common11;
+    line-height: $common18;
+    letter-spacing: -0.23px;
+  }
 }
