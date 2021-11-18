@@ -1,0 +1,94 @@
+@import '../../_variables.scss';
+
+//Global Filter Container & Animation
+.Filters {
+    position: absolute;
+    width: 192px;
+    background: $basicWhite;
+    top: 50px;
+    left: -40px;
+    border-radius: $common8;
+    box-shadow: $common0 $common10 $common20 $filterBoxShadow;
+    padding: $common24;
+    opacity: 0;
+    transform: translateY($common20);
+    animation: animationFilter 0.4s forwards;
+    z-index: 20;
+}
+@keyframes animationFilter {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+button {
+    cursor: url('../../Assets/pointer.png'), pointer;
+}
+
+.Filter {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: url('../../Assets/pointer.png'), pointer;
+    margin-bottom: $common16;
+    &.Filter:nth-child(3) {
+        margin-bottom: 0;
+    }
+    &:hover {
+        & .Box {
+            border-color: $colorOne;
+        }
+    }
+    & p {
+        font-weight: $weight700;
+        margin-top: $common2;
+        margin-left: $common12;
+        text-transform: capitalize;
+    }
+}
+
+//Inside Box Container Names
+.Box {
+    width: $common16;
+    height: $common16;
+    border: $common1 solid transparent;
+    border-radius: $common2;
+    background: $colorFive;
+    transition: 0.3s;
+    &.Active {
+        background: $colorOne;
+    }
+}
+
+/* DARK MODE CONTAINER */
+.Filters {
+    &.Dark {
+        background: $colorFour;
+        box-shadow: $common0 $common10 $common20 $filterBoxShadowDarkMode;
+    }
+}
+  
+.Dark {
+    & .Box {
+        background: $colorThree;
+    }
+}
+  
+.Dark {
+    & .Box {
+        &.Active {
+            background: $colorOne;
+        }
+    }
+}
+  
+.Dark {
+    & .Filter {
+        p {
+            color: $basicWhite;
+        }
+    }
+}
+  

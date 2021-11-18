@@ -17,12 +17,13 @@
         color: $colorEight;
     }
     @include breakpoint600() {
-        margin-top: 96px;
+        margin-top: $common32;
     }
   }
   
   .Invoice {
     background: $basicWhite;
+    cursor: url('../../Assets/pointer.png'), pointer;
     box-shadow: 0px $common10 $common10 -5px $darkModeBoxShadow;
     border-radius: $common8;
     padding: $common18 $common20 $common18 $common32;
@@ -33,6 +34,9 @@
     grid-template-columns: 1fr 1.5fr 1.5fr 1.5fr 1.5fr $common20;
     align-items: center;
     gap: 6px;
+    &:active {
+        transform: scale(0.99);
+    }
     &:hover {
         border-color: $colorOne;
     }
@@ -118,22 +122,38 @@
   
   /*  DARK MODE INVOICE CONTAINER  */
   
-  .Dark .Invoice {
-    background-color: $colorThree;
-    box-shadow: 0px $common10 $common10 -10px $darkModeBoxShadow;
-    border-radius: $common8;
+  .Dark {
+    & .Invoice {
+        background-color: $colorThree;
+        box-shadow: $common0 $common10 $common10 -10px $darkModeBoxShadow;
+        border-radius: $common8;
+    }
   }
   
-  .Dark .InfoId h4 {
-    color: $basicWhite;
+  .Dark {
+    & .InfoId {
+        & h4 {
+            color: $basicWhite;
+        }
+    }
   }
   
-  .Dark .InfoDate p {
-    color: $colorFive;
+  .Dark {
+    & .InfoDate {
+        & p {
+            color: $colorFive;
+        }
+    }
   }
-  .Dark .InfoName {
-    color: $basicWhite;
+  .Dark {
+    & .InfoName {
+        color: $basicWhite;
+    }
   }
-  .Dark .InfoPrice h3 {
-    color: $basicWhite;
+  .Dark {
+    & .InfoPrice {
+        & h3 {
+            color: $basicWhite;
+        }
+    }
   }

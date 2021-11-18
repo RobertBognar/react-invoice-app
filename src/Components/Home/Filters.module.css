@@ -1,0 +1,99 @@
+.Filters {
+  position: absolute;
+  width: 192px;
+  background: #fefefe;
+  top: 50px;
+  left: -40px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+          box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+  padding: 24px;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-animation: animationFilter 0.4s forwards;
+          animation: animationFilter 0.4s forwards;
+  z-index: 20;
+}
+
+@-webkit-keyframes animationFilter {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes animationFilter {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+button {
+  cursor: url("../../Assets/pointer.png"), pointer;
+}
+
+.Filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  border: none;
+  cursor: url("../../Assets/pointer.png"), pointer;
+  margin-bottom: 16px;
+}
+
+.Filter.Filter:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.Filter:hover .Box {
+  border-color: #7c5dfa;
+}
+
+.Filter p {
+  font-weight: 700;
+  margin-top: 2px;
+  margin-left: 12px;
+  text-transform: capitalize;
+}
+
+.Box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: #dfe3fa;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.Box.Active {
+  background: #7c5dfa;
+}
+
+/* DARK MODE CONTAINER */
+.Filters.Dark {
+  background: #252945;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.Dark .Box {
+  background: #1e2139;
+}
+
+.Dark .Box.Active {
+  background: #7c5dfa;
+}
+
+.Dark .Filter p {
+  color: #fefefe;
+}
+/*# sourceMappingURL=Filters.module.css.map */

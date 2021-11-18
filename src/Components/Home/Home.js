@@ -1,12 +1,15 @@
 import React from "react";
 
 import Invoices from './Invoices';
+import HomeNavigation from './HomeNavigation';
 import data from './../../Data/data.json';
 
 import { GlobalContext } from './../../Context/GlobalMode';
 
 const Home = () => {
     const [invoices, setInvoices] = React.useState(null);
+
+    const [filter, setFilter] = React.useState("");
 
     const [dados, setDados] = React.useState(data);
 
@@ -36,6 +39,13 @@ const Home = () => {
 
     return (
         <>
+            <HomeNavigation
+                filter={filter}
+                setFilter={setFilter}
+                invoicesLength={invoices ? invoices.length : 0}
+                dadosLength={dados.length}
+                mode={global.mode}
+            />
             {invoices && (
                 <Invoices
                     data={invoices}

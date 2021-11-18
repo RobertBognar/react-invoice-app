@@ -133,7 +133,7 @@
 .mode button {
   background: transparent;
   border: none;
-  cursor: pointer;
+  cursor: url("../../Assets/pointer.png"), pointer;
 }
 
 .mode button:hover path {
