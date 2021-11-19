@@ -20,11 +20,7 @@ const Invoice = () => {
         if (invoices) {
             setItem(invoices.filter(({ id }) => id === params.id)[0]);
         }
-
-        window.scrollTo({
-            top: 0,
-            // behavior: "smooth",
-        });
+        
     }, [params.id]);
 
     React.useEffect(() => {

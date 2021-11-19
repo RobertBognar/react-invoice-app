@@ -1,0 +1,103 @@
+@import './../../variables';
+
+//Mixins For Responsivnes
+
+@mixin breakpoint500 {
+    @media (max-width: #{$breakPoint500}) {
+        @content;
+    }
+}
+
+//Delete Container
+.DeleteInvoice {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 555;
+    width: 100vw;
+    height: 100vh;
+    background: $deleteBoxModal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: animaDeleteModal forwards 0.3s;
+}
+@keyframes animaDeleteModal {
+    to {
+      opacity: 1;
+    }
+}
+
+//Confirmation Pop Up
+.Confirmation {
+    max-width: 480px;
+    background-color: $basicWhite;
+    padding: $common48;
+    border-radius: $common8;
+    & b {
+        font-size: $common24;
+        line-height: $common32;
+        letter-spacing: -0.5px;
+        @include breakpoint500() {
+            font-size: $common20;
+        }
+    }
+    & p {
+        line-height: $common22;
+        color: $colorSix;
+        margin-top: $common12;
+    }
+    @include breakpoint500() {
+        margin: 0 $common24;
+        padding: $common32;
+    }
+}
+
+//Buttons Container Styling
+.Buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: $common16;
+    & .Cancel {
+        background: $colorEleven;
+        color: $colorSeven;
+        padding: $common10;
+        border-radius: $common24;
+        border: none;
+        &:hover {
+            background: $colorFive;
+        }
+    }
+    & .Delete {
+        background: $colorNine;
+        color: $basicWhite;
+        padding: $common10;
+        border-radius: $common24;
+        border: none;
+        margin: 0 $common8;
+        &:hover {
+            background: $colorTen;
+        }
+    }
+}
+
+/* DARK MODE CONTAINER */ 
+.Dark {
+    & .Confirmation {
+        background: $colorThree;
+        & b {
+            color: $basicWhite;
+        }
+        & p {
+            color: $colorFive;
+        }
+    }
+    & .Cancel {
+        background: $colorFour;
+        color: $colorFive;
+        &:hover {
+            background: $colorTwelve
+        }
+    }
+}

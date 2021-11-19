@@ -1,1 +1,123 @@
-/* No CSS *//*# sourceMappingURL=DeleteInvoice.module.css.map */
+.DeleteInvoice {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 555;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-animation: animaDeleteModal forwards 0.3s;
+          animation: animaDeleteModal forwards 0.3s;
+}
+
+@-webkit-keyframes animaDeleteModal {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animaDeleteModal {
+  to {
+    opacity: 1;
+  }
+}
+
+.Confirmation {
+  max-width: 480px;
+  background-color: #fefefe;
+  padding: 48px;
+  border-radius: 8px;
+}
+
+.Confirmation b {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+}
+
+@media (max-width: 500px) {
+  .Confirmation b {
+    font-size: 20px;
+  }
+}
+
+.Confirmation p {
+  line-height: 22px;
+  color: #888eb0;
+  margin-top: 12px;
+}
+
+@media (max-width: 500px) {
+  .Confirmation {
+    margin: 0 24px;
+    padding: 32px;
+  }
+}
+
+.Buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.Buttons .Cancel {
+  background: #f8f8fb;
+  color: #7e88c3;
+  padding: 10px;
+  border-radius: 24px;
+  border: none;
+}
+
+.Buttons .Cancel:hover {
+  background: #dfe3fa;
+}
+
+.Buttons .Delete {
+  background: #ec5757;
+  color: #fefefe;
+  padding: 10px;
+  border-radius: 24px;
+  border: none;
+  margin: 0 8px;
+}
+
+.Buttons .Delete:hover {
+  background: #ff9797;
+}
+
+/* DARK MODE CONTAINER */
+.Dark .Confirmation {
+  background: #1e2139;
+}
+
+.Dark .Confirmation b {
+  color: #fefefe;
+}
+
+.Dark .Confirmation p {
+  color: #dfe3fa;
+}
+
+.Dark .Cancel {
+  background: #252945;
+  color: #dfe3fa;
+}
+
+.Dark .Cancel:hover {
+  background: #141625;
+}
+/*# sourceMappingURL=DeleteInvoice.module.css.map */
