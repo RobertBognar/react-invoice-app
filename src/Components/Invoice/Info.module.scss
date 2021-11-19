@@ -1,0 +1,257 @@
+@import './../../variables';
+
+@mixin breakpoint600 {
+    @media (max-width: #{$breakPoint600}) {
+        @content;
+    }
+}
+
+//Global Container Invoice Info Styling
+.Info {
+    width: 100%;
+    margin-top: $common24;
+    border-radius: $common8;
+    padding: 48px;
+    background: $basicWhite;
+    box-shadow: $common0 $common10 $common10 -10px $darkModeBoxShadow;
+    margin-bottom: $common72;
+    & b {
+        color: $colorEight;
+    }
+    & ul {
+        list-style: none;
+        & li {
+            margin-bottom: 4px;
+        }
+    }
+    & p {
+        color: $colorSeven;
+    }
+    @include breakpoint600() {
+        padding: $common24;
+    }
+}
+
+//Info Headers Container Styling
+.InfoHeader {
+    display: flex;
+    justify-content: space-between;
+    & .InfoHeaderItem1 {
+        & h3 {
+            & span {
+                color: $colorSix;
+            }
+        }
+        & p {
+            margin-top: $common8;
+        }
+    }
+    & .InfoHeaderItem2 {
+        & ul {
+            text-align: right;
+            @include breakpoint600() {
+                text-align: start;
+                margin-top: 30px;
+                margin-bottom: $common20;
+            }
+        }
+    }
+    @include breakpoint600() {
+        justify-content: initial;
+        flex-direction: column;
+    }
+}
+
+//Info Body Container Styling
+.InfoBody {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.1fr;
+    margin-top: $common16;
+    & b {
+        font-size: $common15;
+        line-height: $common20;
+        letter-spacing: -0.3125px;
+    }
+    & .Date {
+        & b {
+            display: block;
+            margin-bottom: $common32;
+        }
+    }
+    & .BillTo {
+        & b {
+            display: block;
+            margin-bottom: $common8;
+        }
+    }
+    & .Date p, .BillToTitle, .SentTo p {
+      margin-bottom: $common12;
+    }
+    @include breakpoint600() {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto;
+    }
+}
+
+//Invoice Items Container Styling
+.InvoiceItems {
+    border-radius: $common8;
+    overflow: hidden;
+    margin-top: $common24;
+    & .Items {
+        padding: $common32 $common32 $common40 $common32;
+        background: $colorEleven;
+        transition: background 0.3s;
+        & .ItemsHeader {
+            display: grid;
+            grid-template-columns: 1.25fr 0.25fr 0.75fr 1fr;
+            gap: $common8;
+            & .TextAlignCenter {
+                text-align: center;
+            }
+            & .TextAlignRight {
+                text-align: right;
+            }
+        }
+        @include breakpoint600() {
+            display: none;
+        }
+    }
+}
+
+//Items Container Styling
+.ItemBody {
+    display: grid;
+    grid-template-columns: 1.25fr 0.25fr 0.75fr 1fr;
+    font-size: $common12;
+    margin-top: $common32;
+    gap: $common8;
+    & .TextAlignCenter {
+        text-align: center;
+    }
+    & .TextAlignRight {
+        text-align: right;
+    }
+    & b {
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &.QTYPriceColor {
+            color: $colorSeven;
+        }
+    }
+}
+
+//Total Container Styling 
+.Total {
+    padding: $common24 $common32;
+    background-color: $colorThirten;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s;
+    & p {
+        color: $basicWhite;
+    }
+    & b {
+        font-size: $common24;
+        line-height: $common32;
+        text-align: right;
+        letter-spacing: -0.5px;
+        color: $basicWhite;
+        @include breakpoint600() {
+            font-size: $common20;
+        }
+    }
+    @include breakpoint600() {
+        padding: $common24;
+    }
+}
+
+/* DARK MODE CONTAINER */
+.Info.Dark {
+    background: $colorThree;
+    & b {
+        color: $basicWhite;
+    }
+    & .InfoHeaderItem1 {
+        & h3 {
+            color: $basicWhite;
+        }
+    }
+}
+
+.Dark {
+    &.Info {
+        & p {
+            color: $colorFive;
+        }
+    }
+    & .Items {
+        background: $colorFour;
+    }
+    & b {
+        &.QTYPriceColor {
+            color: $colorFive;
+        }
+    }
+    & .Total {
+        background: $colorEight;
+        & p {
+            color: $basicWhite; 
+        }
+    }
+}
+
+//Mobile Container Styling & Dark Mode
+.ItemsMobile {
+    display: none;
+    padding: $common24 $common24 0;
+    background: $colorEleven;
+    flex-direction: column;
+    & .ItemMobileBody {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $common24;
+    }
+    @include breakpoint600() {
+        display: flex;
+    }
+}
+
+.ItemsMobileBody1 {
+    & h4 {
+        color: $colorEight;
+    }
+    & p {
+        font-weight: 700;
+        color: $colorSeven;
+        margin-top: $common8;
+    }
+}
+
+.ItemsMobileBody2 p {
+    font-weight: $weight700;
+    color: $colorEight;
+}
+
+.Dark {
+    & .ItemsMobile {
+        background: $colorFour;
+    }
+    & .ItemsMobileBody1 {
+        & h4 {
+            color: $basicWhite;
+        }
+        & p {
+            color: $colorSix;
+        }
+    }
+}
+
+.Dark .ItemsMobileBody2 p {
+    color: $basicWhite;
+}
