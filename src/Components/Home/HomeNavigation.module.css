@@ -24,7 +24,13 @@
 }
 
 .Title h1 {
-  font-size: 20px;
+  font-size: 32px;
+}
+
+@media (max-width: 600px) {
+  .Title h1 {
+    font-size: 20px;
+  }
 }
 
 .Buttons {
@@ -33,6 +39,10 @@
   display: flex;
   position: relative;
   cursor: url("../../Assets/pointer.png"), pointer;
+}
+
+.Buttons .TextDesktop {
+  font-size: 14px;
 }
 
 .Filter, .NewInvoice {
@@ -155,6 +165,6 @@
 }
 
 .Dark .Filter p {
-  color: #fff;
+  color: #fefefe;
 }
 /*# sourceMappingURL=HomeNavigation.module.css.map */

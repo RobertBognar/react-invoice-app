@@ -1,0 +1,84 @@
+/* GLOBAL INPUT CONTAINER */
+.Input {
+  margin-top: 1.5rem;
+}
+
+.Input label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #7e88c3;
+  font-size: 12px;
+  margin-bottom: 0.625rem;
+}
+
+.Error {
+  color: #ec5757;
+}
+
+.ErrorWarning {
+  font-size: 10px;
+}
+
+.InputError, .InputError:hover, .InputError:focus {
+  border-color: #ec5757;
+}
+
+/* DARK MODE CONTAINER STYLING */
+.Dark.Input label {
+  color: #dfe3fa;
+}
+
+.Dark.Input input {
+  background: #1e2139;
+  border-color: #252945;
+  color: #fff;
+}
+
+.Dark.Input input::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.Dark.Input input:-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.Dark.Input input::-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.Dark.Input input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.Dark.Input input:hover {
+  border-color: #7c5dfa;
+}
+
+.Dark.Input input:focus {
+  border-color: #7c5dfa;
+}
+
+.Dark.Input input.InputError {
+  border-color: #ec5757;
+}
+
+.Dark.Input input.InputError:hover {
+  border-color: #ec5757;
+}
+
+.Dark.Input input.InputError:focus {
+  border-color: #ec5757;
+}
+
+.Dark .Error {
+  color: #ec5757;
+}
+/*# sourceMappingURL=Input.module.css.map */

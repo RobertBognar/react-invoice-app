@@ -1,11 +1,12 @@
 import React from "react";
 import { useParams } from "react-router";
 
-import DeleteInvoice from "./DeleteInvoice";
+import DeleteInvoice from './DeleteInvoice';
 import Info from './Info';
 import Status from './Status';
+import UpdateInvoice from './UpdateInvoice';
 
-import { GlobalContext } from "../../Context/GlobalMode";
+import { GlobalContext } from '../../Context/GlobalMode';
 
 const Invoice = () => {
     const params = useParams();
@@ -15,17 +16,17 @@ const Invoice = () => {
     const global = React.useContext(GlobalContext);
 
     React.useEffect(() => {
-        const invoices = JSON.parse(window.localStorage.getItem("invoices"));
+        const invoices = JSON.parse(window.localStorage.getItem('invoices'));
 
         if (invoices) {
             setItem(invoices.filter(({ id }) => id === params.id)[0]);
         }
-        
+
     }, [params.id]);
 
     React.useEffect(() => {
-        if (global.mode) document.body.classList.add("dark");
-        else document.body.classList.remove("dark");
+        if (global.mode) document.body.classList.add('dark');
+        else document.body.classList.remove('dark');
     }, [global.mode]);
 
     return (
@@ -41,6 +42,9 @@ const Invoice = () => {
                 />
             )}
             {item && <Info item={item} mode={global.mode} />}
+            {item && edit && (
+                <UpdateInvoice invoice={item} closeModal={setEdit} setItem={setItem} />
+            )}
             {item && del && (
                 <DeleteInvoice id={item.id} setDel={setDel} mode={global.mode} />
             )}

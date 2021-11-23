@@ -83,6 +83,8 @@
     }
 }
 .Edit {
+    width: 73px;
+    height: 48px;
     background: $colorEleven;
     color: $colorSeven;
     padding: $common10;
@@ -94,6 +96,8 @@
 }
 
 .Delete {
+    width: 89px;
+    height: 48px;
     padding: $common10;
     border-radius: $common24;
     border: none;
@@ -106,6 +110,8 @@
 }
 
 .MarkAsPaid {
+    width: 131px;
+    height: 48px;
     background: $colorOne;
     color: $basicWhite;
     padding: $common10;

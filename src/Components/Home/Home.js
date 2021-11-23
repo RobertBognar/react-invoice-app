@@ -3,13 +3,14 @@ import React from "react";
 import Invoices from './Invoices';
 import HomeNavigation from './HomeNavigation';
 import data from './../../Data/data.json';
+import NewInvoice from "./NewInvoice";
 
 import { GlobalContext } from './../../Context/GlobalMode';
 
 const Home = () => {
     const [invoices, setInvoices] = React.useState(null);
-
-    const [filter, setFilter] = React.useState("");
+    const [filter, setFilter] = React.useState('');
+    const [newInvoice, setNewInvoice] = React.useState(false);
 
     const [dados, setDados] = React.useState(data);
 
@@ -43,17 +44,20 @@ const Home = () => {
                 filter={filter}
                 setFilter={setFilter}
                 invoicesLength={invoices ? invoices.length : 0}
+                setNewInvoice={setNewInvoice}
                 dadosLength={dados.length}
                 mode={global.mode}
             />
             {invoices && (
                 <Invoices
                     data={invoices}
+                    filter={filter}
                     dados={dados}
                     setDados={setDados}
                     mode={global.mode}
                 />
             )}
+            {newInvoice && <NewInvoice setNewInvoice={setNewInvoice} />}
         </>
     );
 };

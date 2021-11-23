@@ -19,7 +19,7 @@ const Invoices = ({ data, filter, dados, setDados, mode }) => {
     if (dados.length > 0)
         return (
             <section
-                className={`container ${styles.Invoices} ${mode ? styles.Dark : ""}`}
+                className={`container ${styles.Invoices} ${mode ? styles.Dark : ''}`}
             >
                 {dados.map(({ id, paymentDue, clientName, total, status }) => (
                     <Link to={`/invoice/${id}`} key={id}>
@@ -32,17 +32,17 @@ const Invoices = ({ data, filter, dados, setDados, mode }) => {
                             </div>
                             <div className={styles.InfoDate}>
                                 <p>
-                                    {paymentDue ? `Due ${DateFormat(paymentDue)}` : "No Date"}
+                                    {paymentDue ? `Due ${DateFormat(paymentDue)}` : 'No Date'}
                                 </p>
                             </div>
                             <div className={styles.InfoName}>
-                                <p>{clientName ? clientName : "Unnamed"}</p>
+                                <p>{clientName ? clientName : 'Unnamed'}</p>
                             </div>
                             <div className={styles.InfoPrice}>
                                 <h3>
-                                    {total.toLocaleString("pt-br", {
-                                        style: "currency",
-                                        currency: "GBP",
+                                    {total.toLocaleString('pt-br', {
+                                        style: 'currency',
+                                        currency: 'GBP',
                                     })}
                                 </h3>
                             </div>

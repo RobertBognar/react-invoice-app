@@ -1,0 +1,60 @@
+@import './../../variables';
+
+/* GLOBAL INPUT CONTAINER */
+.Input {
+    margin-top: 1.5rem;
+    & label {
+        display: flex;
+        justify-content: space-between;
+        color: $colorSeven;
+        font-size: 12px;
+        margin-bottom: 0.625rem;
+    }
+}
+
+.Error {
+    color: $colorNine;
+}
+.ErrorWarning {
+    font-size: 10px;
+}
+.InputError, .InputError:hover, .InputError:focus {
+    border-color: $colorNine;
+}
+  
+/* DARK MODE CONTAINER STYLING */
+  
+.Dark {
+    &.Input {
+        & label {
+            color: $colorFive;
+        }
+        & input {
+            background: $colorThree;
+            border-color: $colorFour;
+            color: #fff;
+            &::placeholder {
+                color: #fff;
+                opacity: 1;
+            }
+            &:hover {
+                border-color: $colorOne;
+            }
+            &:focus {
+                border-color: $colorOne;
+            }
+            &.InputError {
+                border-color: $colorNine;
+                &:hover {
+                    border-color: $colorNine;
+                }
+                &:focus {
+                    border-color: $colorNine;
+                }
+            }
+        }
+    }
+    & .Error {
+        color: $colorNine;
+    }
+}

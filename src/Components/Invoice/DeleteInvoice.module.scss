@@ -60,6 +60,8 @@
     justify-content: flex-end;
     margin-top: $common16;
     & .Cancel {
+        width: 91px;
+        height: $common48;
         background: $colorEleven;
         color: $colorSeven;
         padding: $common10;
@@ -70,6 +72,8 @@
         }
     }
     & .Delete {
+        width: 89px;
+        height: $common48;
         background: $colorNine;
         color: $basicWhite;
         padding: $common10;

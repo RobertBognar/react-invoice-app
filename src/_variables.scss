@@ -19,6 +19,8 @@ $colorTen: #ff9797;
 $colorEleven: #f8f8fb;
 $colorTwelve: #141625;
 $colorThirten: #373B53;
+$colorFourteen: #777F98;
+$colorFifteen: #F9FAFE;
 $borderColorOne: rgba(255, 255, 255, 0.1);
 $darkModeBoxShadow: rgba(72, 84, 159, 0.1);
 $paidColorBall: #33d69f;
@@ -31,34 +33,43 @@ $draftDarkBackgroundColor: rgba(223, 227, 250, 0.06);
 $filterBoxShadow: rgba(72, 84, 159, 0.25);
 $filterBoxShadowDarkMode: rgba(0, 0, 0, 0.25);
 $deleteBoxModal: rgba(0, 0, 0, 0.5);
+$newInvoiceModal: rgba(0, 0, 0, 0.1);
 
 //BORDERS, RADIUS, MARGINS & FONT SIZE COMMONS
 $common0: 0px;
 $common1: 1px;
 $common2: 2px;
+$common4: 4px;
 $common6: 6px;
 $common8: 8px;
 $common10: 10px;
 $common11: 11px;
 $common12: 12px;
+$common14: 14px;
 $common15: 15px;
 $common16: 16px;
 $common18: 18px;
 $common20: 20px;
 $common22: 22px;
 $common24: 24px;
+$common30: 30px;
 $common32: 32px;
 $common36: 36px;
 $common40: 40px;
+$common46: 46px;
 $common48: 48px;
+$common56: 56px;
 $common64: 64px;
 $common72: 72px;
 $common80: 80px;
+$common100: 100px;
+$common128: 128px;
 
 //Responsivnes & BreakPoints
 
 $breakPoint850: 850px;
 $breakPoint650: 650px;
 $breakPoint600: 600px;
+$breakPoint550: 550px;
 $breakPoint500: 500px;
 $breakpoint425: 425px;

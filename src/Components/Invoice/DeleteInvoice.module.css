@@ -75,6 +75,8 @@
 }
 
 .Buttons .Cancel {
+  width: 91px;
+  height: 48px;
   background: #f8f8fb;
   color: #7e88c3;
   padding: 10px;
@@ -87,6 +89,8 @@
 }
 
 .Buttons .Delete {
+  width: 89px;
+  height: 48px;
   background: #ec5757;
   color: #fefefe;
   padding: 10px;

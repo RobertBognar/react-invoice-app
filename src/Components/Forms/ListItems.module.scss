@@ -1,0 +1,92 @@
+@import './../../variables';
+
+//Mixins For Responsivnes
+@mixin breakpoint550 {
+    @media (max-width: #{$breakPoint550}) {
+        @content;
+    }
+}
+
+/* GLOBAL LIST ITEMS CONTAINER*/
+.ListItems {
+    display: grid;
+    grid-template-columns: 1fr $common46 $common100 $common80 $common20;
+    column-gap: $common16;
+    margin-bottom: $common18;
+    transform: translateX(30px);
+    animation: animaItem forwards 0.3s;
+    & input {
+        cursor: url('../../Assets/pointer.png'), pointer;
+        border: $common1 solid $colorFive;
+        border-radius: $common4;
+        height: $common48;
+        &:hover {
+            border-color: $colorTwo;
+        }
+    }
+    @include breakpoint550() {
+        display: grid;
+        grid-template-columns: $common80 $common32 $common80 $common40 $common20;
+    }
+}
+@keyframes animaItem {
+    to {
+      transform: translateX(0);
+    }
+}
+.Total {
+    display: flex;
+    align-items: center;
+    font-weight: $weight700;
+    color: $colorSix;
+}
+.Delete {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    & svg {
+        & path {
+            transition: 0.3s;
+            &:hover {
+                fill: $colorNine;
+            }
+        }
+    }
+}
+
+.Error {
+  &:hover {
+    border-color: $colorNine;
+  }
+  &:focus {
+    border-color: $colorNine;
+  } 
+}
+
+.Qty {
+    padding: 0 $common4;
+    text-align: center;
+}
+
+/* DARK CONTAINER STYLING */
+.ListItems.Dark input {
+    background: $colorThree;
+    border-color: $colorFour;
+    color: $basicWhite;
+    &:hover {
+        border-color: $colorOne;
+    }
+    &:focus {
+        border-color: $colorOne;
+    }
+}
+
+.ListItems.Dark input.Error,
+.ListItems.Dark input.Error:hover,
+.ListItems.Dark input.Error:focus {
+    border-color: $colorNine;
+}
+  
+.ListItems.Dark .Total {
+    color: $colorFive;
+}

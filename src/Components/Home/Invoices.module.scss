@@ -21,10 +21,10 @@
     }
   }
   
-  .Invoice {
+.Invoice {
     background: $basicWhite;
     cursor: url('../../Assets/pointer.png'), pointer;
-    box-shadow: 0px $common10 $common10 -5px $darkModeBoxShadow;
+    box-shadow: $common0 $common10 $common10 -5px $darkModeBoxShadow;
     border-radius: $common8;
     padding: $common18 $common20 $common18 $common32;
     border: $common1 solid transparent;
@@ -116,44 +116,33 @@
           "date status"
           "price status";
         gap: initial;
-        padding: 1.5rem;
+        padding: $common24;
     }
-  }
+}
   
-  /*  DARK MODE INVOICE CONTAINER  */
-  
-  .Dark {
+/*  DARK MODE INVOICE CONTAINER  */
+.Dark {
     & .Invoice {
         background-color: $colorThree;
         box-shadow: $common0 $common10 $common10 -10px $darkModeBoxShadow;
         border-radius: $common8;
     }
-  }
-  
-  .Dark {
     & .InfoId {
         & h4 {
             color: $basicWhite;
         }
     }
-  }
-  
-  .Dark {
     & .InfoDate {
         & p {
             color: $colorFive;
         }
     }
-  }
-  .Dark {
     & .InfoName {
         color: $basicWhite;
     }
-  }
-  .Dark {
     & .InfoPrice {
         & h3 {
             color: $basicWhite;
         }
     }
-  }
+}

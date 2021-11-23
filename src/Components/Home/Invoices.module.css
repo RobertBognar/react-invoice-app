@@ -143,7 +143,7 @@
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: "id name" "date status" "price status";
     gap: initial;
-    padding: 1.5rem;
+    padding: 24px;
   }
 }
 

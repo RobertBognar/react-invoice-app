@@ -19,9 +19,9 @@ const Info = ({ item, mode }) => {
     ];
 
     function localeStringBr(value) {
-        return Number(value).toLocaleString("pt-br", {
-            style: "currency",
-            currency: "GBP",
+        return Number(value).toLocaleString('pt-br', {
+            style: 'currency',
+            currency: 'GBP',
         });
     }
 
@@ -33,14 +33,14 @@ const Info = ({ item, mode }) => {
                         <span>#</span>
                         {item.id}
                     </h3>
-                    <p>{item.description ? item.description : "No information"}</p>
+                    <p>{item.description ? item.description : 'No information'}</p>
                 </div>
 
                 <div className={styles.InfoHeaderItem2}>
                     <ul>
                         {andress1.map((name, index) => (
                             <li key={`${name}${index}`}>
-                                <p>{name ? name : "No information"}</p>
+                                <p>{name ? name : 'No information'}</p>
                             </li>
                         ))}
                     </ul>
@@ -50,18 +50,18 @@ const Info = ({ item, mode }) => {
             <div className={styles.InfoBody}>
                 <div className={styles.Date}>
                     <p>Invoice Date</p>
-                    <b>{item.createdAt ? DateFormat(item.createdAt) : "No Date"}</b>
+                    <b>{item.createdAt ? DateFormat(item.createdAt) : 'No Date'}</b>
                     <p>Payment Due</p>
-                    <b>{item.paymentDue ? DateFormat(item.paymentDue) : "No Date"}</b>
+                    <b>{item.paymentDue ? DateFormat(item.paymentDue) : 'No Date'}</b>
                 </div>
 
                 <div className={styles.BillTo}>
                     <p className={styles.BillToTitle}>Bill To</p>
-                    <b>{item.clientName ? item.clientName : "Unnamed"}</b>
+                    <b>{item.clientName ? item.clientName : 'Unnamed'}</b>
                     <ul>
                         {andress2.map((name, index) => (
                             <li key={index}>
-                                <p>{name ? name : "No information"}</p>
+                                <p>{name ? name : 'No information'}</p>
                             </li>
                         ))}
                     </ul>
@@ -69,7 +69,7 @@ const Info = ({ item, mode }) => {
 
                 <div className={styles.SentTo}>
                     <p>Sent to</p>
-                    <b>{item.clientEmail ? item.clientEmail : "No email"}</b>
+                    <b>{item.clientEmail ? item.clientEmail : 'No email'}</b>
                 </div>
             </div>
 

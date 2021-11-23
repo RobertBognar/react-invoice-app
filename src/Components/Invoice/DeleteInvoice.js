@@ -7,12 +7,12 @@ const DeleteInvoice = ({ id, setDel, mode }) => {
     const navigate = useNavigate();
 
     function handleDeleteInvoice() {
-        const invoices = JSON.parse(window.localStorage.getItem("invoices"));
+        const invoices = JSON.parse(window.localStorage.getItem('invoices'));
         const newInvoices = invoices.filter((item) => item.id !== id);
 
-        window.localStorage.setItem("invoices", JSON.stringify(newInvoices));
+        window.localStorage.setItem('invoices', JSON.stringify(newInvoices));
 
-        navigate("/");
+        navigate('/');
     }
 
     function closeModal({ target, currentTarget }) {
@@ -23,7 +23,7 @@ const DeleteInvoice = ({ id, setDel, mode }) => {
 
     return (
         <section
-            className={`${styles.DeleteInvoice} ${mode ? styles.Dark : ""}`}
+            className={`${styles.DeleteInvoice} ${mode ? styles.Dark : ''}`}
             onClick={closeModal}
         >
             <div className={styles.Confirmation}>

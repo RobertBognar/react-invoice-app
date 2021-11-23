@@ -1,10 +1,11 @@
 import React from "react";
-import styles from "./NoResult.module.css";
-import { ReactComponent as Illustration } from "./../../Assets/illustration-empty.svg";
+
+import styles from './NoResult.module.css';
+import { ReactComponent as Illustration } from './../../Assets/illustration-empty.svg';
 
 const NoResult = ({ text, mode }) => {
   return (
-    <section className={`${styles.NoResult} ${mode ? styles.Dark : ""}`}>
+    <section className={`${styles.NoResult} ${mode ? styles.Dark : ''}`}>
       <Illustration />
       <h2>There is nothing here</h2>
 

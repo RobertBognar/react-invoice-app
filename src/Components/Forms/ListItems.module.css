@@ -1,0 +1,113 @@
+/* GLOBAL LIST ITEMS CONTAINER*/
+.ListItems {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 46px 100px 80px 20px;
+      grid-template-columns: 1fr 46px 100px 80px 20px;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  margin-bottom: 18px;
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+  -webkit-animation: animaItem forwards 0.3s;
+          animation: animaItem forwards 0.3s;
+}
+
+.ListItems input {
+  cursor: url("../../Assets/pointer.png"), pointer;
+  border: 1px solid #dfe3fa;
+  border-radius: 4px;
+  height: 48px;
+}
+
+.ListItems input:hover {
+  border-color: #9277ff;
+}
+
+@media (max-width: 550px) {
+  .ListItems {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 80px 32px 80px 40px 20px;
+        grid-template-columns: 80px 32px 80px 40px 20px;
+  }
+}
+
+@-webkit-keyframes animaItem {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes animaItem {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.Total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  color: #888eb0;
+}
+
+.Delete {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.Delete svg path {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.Delete svg path:hover {
+  fill: #ec5757;
+}
+
+.Error:hover {
+  border-color: #ec5757;
+}
+
+.Error:focus {
+  border-color: #ec5757;
+}
+
+.Qty {
+  padding: 0 4px;
+  text-align: center;
+}
+
+/* DARK CONTAINER STYLING */
+.ListItems.Dark input {
+  background: #1e2139;
+  border-color: #252945;
+  color: #fefefe;
+}
+
+.ListItems.Dark input:hover {
+  border-color: #7c5dfa;
+}
+
+.ListItems.Dark input:focus {
+  border-color: #7c5dfa;
+}
+
+.ListItems.Dark input.Error,
+.ListItems.Dark input.Error:hover,
+.ListItems.Dark input.Error:focus {
+  border-color: #ec5757;
+}
+
+.ListItems.Dark .Total {
+  color: #dfe3fa;
+}
+/*# sourceMappingURL=ListItems.module.css.map */
