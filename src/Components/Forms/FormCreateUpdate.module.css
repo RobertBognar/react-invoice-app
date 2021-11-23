@@ -1,0 +1,534 @@
+/* GLOBAL CONTAINER */
+.FormCreateUpdate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  opacity: 0;
+  -webkit-animation: animaModal 0.3s forwards;
+          animation: animaModal 0.3s forwards;
+}
+
+@-webkit-keyframes animaModal {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animaModal {
+  to {
+    opacity: 1;
+  }
+}
+
+/* SECOND GLOBAL CONTAINER */
+.FormContent {
+  max-width: 720px;
+  height: 100vh;
+  background-color: #fefefe;
+  border-radius: 0px 20px 20px 0px;
+  padding-left: 156px;
+  padding-right: 36px;
+  padding-bottom: 200px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  -webkit-animation: animaForm forwards 0.3s;
+          animation: animaForm forwards 0.3s;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.FormContent h2 {
+  display: inline-block;
+  margin: 56px 0 48px 0;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+}
+
+@media (max-width: 850px) {
+  .FormContent h2 {
+    margin: 128px 0 48px 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .FormContent h2 {
+    margin: 24px 0;
+  }
+}
+
+.FormContent .EditHashtag {
+  color: #888eb0;
+}
+
+@media (max-width: 850px) {
+  .FormContent {
+    padding-left: 56px;
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 550px) {
+  .FormContent {
+    padding-left: 24px;
+    padding-right: 8px;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .FormContent {
+    padding-bottom: 200px;
+  }
+}
+
+@-webkit-keyframes animaForm {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes animaForm {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.FormGoBack {
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  display: none;
+  margin-top: 112px;
+  color: #888eb0;
+}
+
+@media (max-width: 550px) {
+  .FormGoBack {
+    display: block;
+  }
+}
+
+.Dark .FormGoBack {
+  color: #fefefe;
+}
+
+.Dark .FormGoBack svg {
+  margin-right: 16px;
+}
+
+/* FORM CONTAINER WITH SCROLL & DARK MODE STYLING */
+.Form {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 16px;
+  padding-bottom: 80px;
+}
+
+.Form::-webkit-scrollbar {
+  width: 8px;
+}
+
+.Form::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.Form::-webkit-scrollbar-thumb {
+  background: #dfe3fa;
+  border-radius: 4px;
+}
+
+.Form b {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+  color: #7c5dfa;
+}
+
+@media (max-width: 850px) {
+  .Form {
+    padding-bottom: 128px;
+  }
+}
+
+.FormBillFrom {
+  margin-bottom: 48px;
+}
+
+.FormBillFrom input {
+  cursor: url("../../Assets/pointer.png"), pointer;
+  border: 1px solid #dfe3fa;
+  border-radius: 4px;
+  height: 48px;
+}
+
+.FormBillFrom input:hover {
+  border-color: #9277ff;
+}
+
+.Group1 input {
+  width: 504px;
+  height: 48px;
+}
+
+@media (max-width: 550px) {
+  .Group1 input {
+    width: 327px;
+  }
+}
+
+.Group2, .Group3 {
+  display: -ms-grid;
+  display: grid;
+  gap: 24px;
+}
+
+.Group2 {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.Group3 {
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.Group3 input {
+  cursor: url("../../Assets/pointer.png"), pointer;
+  border: 1px solid #dfe3fa;
+  border-radius: 4px;
+  width: 152px;
+  height: 48px;
+}
+
+.Group3 input:hover {
+  border-color: #9277ff;
+}
+
+@media (max-width: 850px) {
+  .Group3 input {
+    width: 132px;
+  }
+}
+
+@media (max-width: 550px) {
+  .Group3 input {
+    width: 152px;
+  }
+}
+
+@media (max-width: 550px) {
+  .Group3, .Group2 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+.Group4 input {
+  width: 502px;
+  height: 48px;
+  cursor: url("../../Assets/pointer.png"), pointer;
+  border: 1px solid #dfe3fa;
+  border-radius: 4px;
+}
+
+.Group4 input:hover {
+  border-color: #9277ff;
+}
+
+.Group4 input::-webkit-input-placeholder {
+  padding-left: 20px;
+}
+
+.Group4 input:-ms-input-placeholder {
+  padding-left: 20px;
+}
+
+.Group4 input::-ms-input-placeholder {
+  padding-left: 20px;
+}
+
+.Group4 input::placeholder {
+  padding-left: 20px;
+}
+
+@media (max-width: 550px) {
+  .Group4 input {
+    width: 327px;
+  }
+}
+
+.Group5 input {
+  width: 240px;
+  height: 48px;
+  cursor: url("../../Assets/pointer.png"), pointer;
+  border: 1px solid #dfe3fa;
+  border-radius: 4px;
+}
+
+.Group5 input:hover {
+  border-color: #9277ff;
+}
+
+@media (max-width: 550px) {
+  .Group5 input {
+    width: 327px;
+  }
+}
+
+.Group6 input {
+  width: 504px;
+  height: 48px;
+  cursor: url("../../Assets/pointer.png"), pointer;
+  border: 1px solid #dfe3fa;
+  border-radius: 4px;
+}
+
+.Group6 input:hover {
+  border-color: #9277ff;
+}
+
+.Group6 input::-webkit-input-placeholder {
+  padding-left: 20px;
+}
+
+.Group6 input:-ms-input-placeholder {
+  padding-left: 20px;
+}
+
+.Group6 input::-ms-input-placeholder {
+  padding-left: 20px;
+}
+
+.Group6 input::placeholder {
+  padding-left: 20px;
+}
+
+@media (max-width: 550px) {
+  .Group6 input {
+    width: 327px;
+  }
+}
+
+.Payment {
+  margin-top: 24px;
+}
+
+.Payment label {
+  display: block;
+  color: #7e88c3;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.Payment select {
+  cursor: url("../../Assets/pointer.png"), pointer;
+  height: 48px;
+  width: 240px;
+  height: 48px;
+  font-size: 12px;
+  letter-spacing: -0.25px;
+  padding-left: 20px;
+  font-weight: 700;
+  font-family: "Spartan", sans-serif;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #dfe3fa;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.Payment select:hover {
+  border-color: #9277ff;
+}
+
+.Payment select:focus {
+  border-color: #9277ff;
+}
+
+@media (max-width: 850px) {
+  .Payment select {
+    width: 226px;
+  }
+}
+
+@media (max-width: 550px) {
+  .Payment select {
+    width: 327px;
+  }
+}
+
+.Payment option {
+  cursor: url("../../Assets/pointer.png"), pointer;
+}
+
+.ItemList {
+  margin-top: 32px;
+}
+
+.ItemList b {
+  font-size: 18px;
+  line-height: 32px;
+  color: #777F98;
+}
+
+@media (max-width: 550px) {
+  .ItemList {
+    overflow-x: auto;
+  }
+}
+
+.NameItems {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 46px 100px 80px 20px;
+      grid-template-columns: 1fr 46px 100px 80px 20px;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.NameItems span {
+  font-size: 12px;
+  line-height: 15px;
+  color: #7e88c3;
+}
+
+@media (max-width: 550px) {
+  .NameItems {
+    -ms-grid-columns: 80px 32px 80px 40px 20px;
+        grid-template-columns: 80px 32px 80px 40px 20px;
+  }
+}
+
+.AddNewItem {
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+  border-radius: 32px;
+  border: none;
+  background-color: #F9FAFE;
+  color: #7e88c3;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.AddNewItem:hover {
+  background-color: #dfe3fa;
+}
+
+.Error1, .Error2 {
+  color: #ec5757;
+}
+
+.Error1 {
+  margin-top: 32px;
+}
+
+.Error2 {
+  margin-top: 8px;
+}
+
+/* BUTTONS CONTAINER STYLING */
+.Buttons {
+  position: fixed;
+  height: 110px;
+  background-color: #fefefe;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0 20px 20px 0;
+  -webkit-box-shadow: 10px -20px 50px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px -20px 50px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+@media (max-width: 550px) {
+  .Buttons {
+    display: none;
+  }
+}
+
+.ButtonsMobile {
+  display: none;
+  margin-top: 32px;
+}
+
+@media (max-width: 550px) {
+  .ButtonsMobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* DARK MODE CONTAINER STYLING */
+.Dark .FormContent {
+  background: #141625;
+}
+
+.Dark .FormContent h2 {
+  color: #fefefe;
+}
+
+.Dark .Payment label {
+  color: #dfe3fa;
+}
+
+.Dark .Payment select {
+  background: #1e2139;
+  border-color: #252945;
+  color: #fefefe;
+}
+
+.Dark .Payment select:hover {
+  border-color: #7c5dfa;
+}
+
+.Dark .Payment select:focus {
+  border-color: #7c5dfa;
+}
+
+.Dark .NameItems span {
+  color: #dfe3fa;
+}
+
+.Dark .AddNewItem {
+  background: #252945;
+  color: #dfe3fa;
+}
+
+.Dark .AddNewItem:hover {
+  background: #1e2139;
+}
+
+.Dark .Buttons {
+  background: #141625;
+}
+
+.Dark .Form::-webkit-scrollbar-thumb {
+  background: #252945;
+}
+/*# sourceMappingURL=FormCreateUpdate.module.css.map */

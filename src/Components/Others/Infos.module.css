@@ -1,0 +1,76 @@
+.InfoStatus {
+  width: 104px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 6px;
+}
+
+.StatusBall {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.InfoStatus p {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.paid {
+  background: rgba(51, 214, 159, 0.06);
+}
+
+.paid .StatusBall {
+  background: #33d69f;
+}
+
+.paid p {
+  color: #33d69f;
+}
+
+.pending {
+  background: rgba(255, 143, 0, 0.06);
+}
+
+.pending .StatusBall {
+  background: #ff8f00;
+}
+
+.pending p {
+  color: #ff8f00;
+}
+
+.draft {
+  background: rgba(55, 59, 83, 0.06);
+}
+
+.draft .StatusBall {
+  background: #373b53;
+}
+
+.draft p {
+  color: #373b53;
+}
+
+/* DARK CONTAINER */
+.Dark.draft {
+  background: rgba(223, 227, 250, 0.06);
+}
+
+.Dark.draft .StatusBall {
+  background: #dfe3fa;
+}
+
+.Dark.draft p {
+  color: #dfe3fa;
+}
+/*# sourceMappingURL=Infos.module.css.map */

@@ -1,0 +1,417 @@
+@import './../../variables';
+
+//Mixins For Responsivnes
+
+@mixin breakpoint850 {
+    @media (max-width: #{$breakPoint850}) {
+        @content;
+    }
+}
+
+@mixin breakpoint650 {
+    @media (max-width: #{$breakPoint650}) {
+        @content;
+    }
+}
+
+@mixin breakpoint550 {
+    @media (max-width: #{$breakPoint550}) {
+        @content;
+    }
+}
+
+/* GLOBAL CONTAINER */
+.FormCreateUpdate {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $deleteBoxModal;
+    z-index: 100;
+    opacity: 0;
+    animation: animaModal 0.3s forwards;
+}
+@keyframes animaModal {
+    to {
+      opacity: 1;
+    }
+}
+  
+/* SECOND GLOBAL CONTAINER */
+.FormContent {
+    max-width: 720px;
+    height: 100vh;
+    background-color: $basicWhite;
+    border-radius: $common0 $common20 $common20 $common0;
+    padding-left: 156px;
+    padding-right: $common36;
+    padding-bottom: 200px;
+    position: relative;
+    overflow: hidden;
+    transform: translateX(-50px);
+    animation: animaForm forwards 0.3s;
+    transition: background 0.3s;
+    & h2 {
+        display: inline-block;
+        margin: $common56 0 $common48 0;
+        font-size: $common24;
+        line-height: $common32;
+        letter-spacing: -0.5px;
+        @include breakpoint850() {
+            margin: $common128 0 $common48 0;
+        }
+        @include breakpoint550() {
+            margin: $common24 0;
+        }
+    }
+    & .EditHashtag {
+        color: $colorSix;
+    }
+    @include breakpoint850() {
+        padding-left: $common56;
+        max-width: 650px;
+    }
+    @include breakpoint550() {
+        padding-left: $common24;
+        padding-right: $common8;
+        border-radius: 0;
+    }
+    @include breakpoint550() {
+        padding-bottom: 200px;
+    }
+} 
+@keyframes animaForm {
+    to {
+      transform: translateX(0);
+    }
+}
+  
+//GoBack Form With Dark Mode
+.FormGoBack {
+    font-weight: $weight700;
+    background: transparent;
+    border: none;
+    display: none;
+    margin-top: 112px;
+    color: $colorSix;
+    @include breakpoint550() {
+        display: block;
+    }
+}
+
+.Dark {
+    & .FormGoBack {
+        color: $basicWhite;
+        & svg {
+            margin-right: $common16;
+        }
+    }
+}
+
+/* FORM CONTAINER WITH SCROLL & DARK MODE STYLING */
+.Form {
+    height: 100%;
+    overflow-y: auto;
+    padding-right: $common16;
+    padding-bottom: $common80;
+    &::-webkit-scrollbar {
+        width: $common8;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $colorFive;
+        border-radius: $common4;
+    }
+    & b {
+        font-size: $common12;
+        line-height: $common15;
+        letter-spacing: -0.25px;
+        color: $colorOne;
+    }
+    @include breakpoint850() {
+        padding-bottom: $common128;
+    }
+}
+
+//Inside Form Group Container
+.FormBillFrom {
+    margin-bottom: $common48;
+    & input {
+        cursor: url('../../Assets/pointer.png'), pointer;
+        border: 1px solid $colorFive;
+        border-radius: $common4;
+        height: 48px;
+        &:hover {
+            border-color: $colorTwo;
+        }
+    }
+}
+
+.Group1 {
+    & input {
+        width: 504px;
+        height: 48px;
+        @include breakpoint550() {
+            width: 327px;
+        }
+    }
+}
+
+.Group2, .Group3 {
+    display: grid;
+    gap: $common24;
+}
+.Group2 {
+    grid-template-columns: 1fr 1fr;
+}
+.Group3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    & input {
+        cursor: url('../../Assets/pointer.png'), pointer;
+        border: $common1 solid $colorFive;
+        border-radius: $common4;
+        width: 152px;
+        height: 48px;
+        &:hover {
+            border-color: $colorTwo;
+        }
+        @include breakpoint850() {
+            width: 132px;
+        }
+        @include breakpoint550() {
+           width: 152px;
+        }
+    }
+}
+
+.Group3, .Group2 {
+    @include breakpoint550() {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+.Group4 {
+    & input {
+        width: 502px;
+        height: 48px;
+        cursor: url('../../Assets/pointer.png'), pointer;
+        border: 1px solid $colorFive;
+        border-radius: $common4;
+        &:hover {
+            border-color: $colorTwo;
+        }
+        &::placeholder {
+            padding-left: $common20;
+        }
+        @include breakpoint550() {
+            width: 327px;
+        }
+    }
+}
+
+.Group5 {
+    & input {
+        width: 240px;
+        height: 48px;
+        cursor: url('../../Assets/pointer.png'), pointer;
+        border: 1px solid $colorFive;
+        border-radius: $common4;
+        &:hover {
+            border-color: $colorTwo;
+        }
+        @include breakpoint550() {
+            width: 327px;
+        }
+    }
+}
+
+.Group6 {
+    & input {
+        width: 504px;
+        height: 48px;
+        cursor: url('../../Assets/pointer.png'), pointer;
+        border: 1px solid $colorFive;
+        border-radius: $common4;
+        &:hover {
+            border-color: $colorTwo;
+        }
+        &::placeholder {
+            padding-left: $common20;
+        }
+        @include breakpoint550() {
+            width: 327px;
+        }
+    }
+}
+
+//Payment Container Styling
+.Payment {
+    margin-top: $common24;
+    & label {
+        display: block;
+        color: $colorSeven;
+        font-size: $common12;
+        margin-bottom: $common10;
+    }
+    & select {
+        cursor: url('../../Assets/pointer.png'), pointer;
+        height: $common48;
+        width: 240px;
+        height: 48px;
+        font-size: $common12;
+        letter-spacing: -0.25px;
+        padding-left: $common20;
+        font-weight: $weight700;
+        font-family: $family;
+        outline: none;
+        border-radius: $common4;
+        border: $common1 solid $colorFive;
+        transition: 0.3s;
+        &:hover {
+            border-color: $colorTwo;
+        }
+        &:focus {
+            border-color: $colorTwo;
+        }
+        @include breakpoint850() {
+            width: 226px;
+        }
+        @include breakpoint550() {
+            width: 327px;
+        }
+    }
+    & option {
+        cursor: url('../../Assets/pointer.png'), pointer;
+    }
+}
+
+//Item Lists Container Styling
+.ItemList {
+    margin-top: $common32;
+    & b {
+        font-size: $common18;
+        line-height: $common32;
+        color: $colorFourteen;
+    }
+    @include breakpoint550() {
+        overflow-x: auto;
+    }
+}
+
+.NameItems {
+    display: grid;
+    grid-template-columns: 1fr $common46 $common100 $common80 $common20;
+    column-gap: $common16;
+    align-items: flex-end;
+    margin-top: $common16;
+    margin-bottom: $common16;
+    & span {
+        font-size: $common12;
+        line-height: $common15;
+        color: $colorSeven;
+    }
+    @include breakpoint550() {
+        grid-template-columns: $common80 $common32 $common80 $common40 $common20;
+    }
+}
+
+.AddNewItem {
+    width: 100%;
+    height: $common48;
+    cursor: pointer;
+    border-radius: $common32;
+    border: none;
+    background-color: $colorFifteen;
+    color: $colorSeven;
+    font-weight: bold;
+    font-size: $common12;
+    transition: background-color 0.3s;
+    &:hover {
+        background-color: $colorFive;
+    }
+}
+
+.Error1, .Error2 {
+    color: $colorNine;
+}
+.Error1 {
+    margin-top: $common32;
+}
+.Error2 {
+    margin-top: $common8;
+}
+
+/* BUTTONS CONTAINER STYLING */
+.Buttons {
+    position: fixed;
+    height: 110px;
+    background-color: $basicWhite;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0 $common20 $common20 0;
+    box-shadow: $common10 -20px 50px $newInvoiceModal;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s;
+    @include breakpoint550() {
+        display: none;
+    }
+}
+  
+.ButtonsMobile {
+    display: none;
+    margin-top: $common32;
+    @include breakpoint550() {
+        display: flex;
+    }
+}
+  
+/* DARK MODE CONTAINER STYLING */
+  
+.Dark {
+    & .FormContent {
+        background: $colorTwelve;
+        & h2 {
+            color: $basicWhite;
+        }
+    }
+    & .Payment {
+        & label {
+            color: $colorFive;
+        }
+        & select {
+            background: $colorThree;
+            border-color: $colorFour;
+            color: $basicWhite;
+            &:hover {
+                border-color: $colorOne;
+            }
+            &:focus {
+                border-color: $colorOne;
+            }
+        }
+    }
+    & .NameItems {
+        & span {
+            color: $colorFive;
+        }
+    }
+    & .AddNewItem {
+        background: $colorFour;
+        color: $colorFive;
+        &:hover {
+            background: $colorThree;
+        }
+    }
+    & .Buttons {
+        background: $colorTwelve;
+    }
+    & .Form::-webkit-scrollbar-thumb {
+        background: $colorFour;
+    } 
+}

@@ -1,0 +1,170 @@
+.Nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 72px;
+}
+
+@media (max-width: 600px) {
+  .Nav {
+    margin-top: 48px;
+  }
+}
+
+.Title p {
+  color: #888eb0;
+  margin-top: 8px;
+}
+
+.Title h1 {
+  font-size: 32px;
+}
+
+@media (max-width: 600px) {
+  .Title h1 {
+    font-size: 20px;
+  }
+}
+
+.Buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  cursor: url("../../Assets/pointer.png"), pointer;
+}
+
+.Buttons .TextDesktop {
+  font-size: 14px;
+}
+
+.Filter, .NewInvoice {
+  border: 0;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: url("../../Assets/pointer.png"), pointer;
+}
+
+.TextMobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .TextMobile {
+    display: inherit;
+  }
+}
+
+@media (max-width: 600px) {
+  .TextDesktop {
+    display: none;
+  }
+}
+
+.Filter p {
+  letter-spacing: -0.25px;
+  font-size: 12px;
+  line-height: 15px;
+  margin-right: 16px;
+  font-weight: 700;
+}
+
+.Filter span {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.Filter span.ArrowActive {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.NewInvoice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #7c5dfa;
+  padding: 8px;
+  border-radius: 50px;
+  margin-left: 32px;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.NewInvoice:hover {
+  background: #9277ff;
+}
+
+.NewInvoice:hover svg path {
+  fill: #9277ff;
+}
+
+.NewInvoice p {
+  margin-top: 2px;
+  font-weight: 700;
+  color: #fefefe;
+  padding-right: 12px;
+}
+
+@media (max-width: 600px) {
+  .NewInvoice {
+    padding: 6px;
+    margin-left: 16px;
+  }
+}
+
+.NewIcon {
+  width: 32px;
+  height: 32px;
+  background: #fefefe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+@media (max-width: 600px) {
+  .NewIcon {
+    margin-right: 8px;
+  }
+}
+
+/* DARK MODE CONTAINER */
+.Title h1,
+.Title p,
+.Filter p {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.Dark .Title h1 {
+  color: #fefefe;
+}
+
+.Dark .Title p {
+  color: #dfe3fa;
+}
+
+.Dark .Filter p {
+  color: #fefefe;
+}
+/*# sourceMappingURL=HomeNavigation.module.css.map */

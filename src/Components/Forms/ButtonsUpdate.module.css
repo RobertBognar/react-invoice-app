@@ -1,0 +1,58 @@
+.ButtonsUpdate {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 156px;
+  margin-right: 60px;
+}
+
+.ButtonsUpdate .Save {
+  background: #7c5dfa;
+  color: #fefefe;
+  margin-left: 0.5rem;
+  padding: 10px;
+  border-radius: 24px;
+  border: none;
+  margin: 0 8px;
+}
+
+.ButtonsUpdate .Save:hover {
+  background: #9277ff;
+}
+
+.ButtonsUpdate .Cancel {
+  background: #f8f8fb;
+  color: #7e88c3;
+  padding: 10px;
+  border-radius: 24px;
+  border: none;
+  margin: 0 8px;
+}
+
+.ButtonsUpdate .Cancel:hover {
+  background-color: #dfe3fa;
+}
+
+@media (max-width: 550px) {
+  .ButtonsUpdate {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+}
+
+/*DARK CONTAINER */
+.Dark .Cancel {
+  background: #252945;
+}
+
+.Dark .Cancel:hover {
+  background: #1e2139;
+}
+/*# sourceMappingURL=ButtonsUpdate.module.css.map */

@@ -1,0 +1,56 @@
+@import './../../variables';
+
+//Mixins For Responsive
+
+@mixin breakpoint550 {
+    @media (max-width: #{$breakPoint550}) {
+        @content;
+    }
+}
+
+//Buttons Update Container
+.ButtonsUpdate {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 156px;
+    margin-right: 60px;
+    & .Save {
+        background: $colorOne;
+        color: $basicWhite;
+        margin-left: 0.5rem;
+        padding: $common10;
+        border-radius: $common24;
+        border: none;
+        margin: 0 $common8;
+        &:hover {
+            background: $colorTwo;
+        }
+    }
+    & .Cancel {
+        background: $colorEleven;
+        color: $colorSeven;
+        padding: $common10;
+        border-radius: $common24;
+        border: none;
+        margin: 0 $common8;
+        &:hover {
+            background-color: $colorFive;
+        }
+    }
+    @include breakpoint550() {
+        margin-left: 0;
+        margin-right: 30px;
+    }
+}
+
+/*DARK CONTAINER */
+.Dark {
+    & .Cancel {
+        background: $colorFour;
+        &:hover {
+            background: $colorThree;
+        }
+    }
+}

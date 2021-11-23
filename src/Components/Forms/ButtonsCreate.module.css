@@ -1,0 +1,115 @@
+.ButtonsCreate {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 156px;
+  margin-right: 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ButtonsCreate .Discard {
+  width: 96px;
+  height: 48px;
+  background: #f8f8fb;
+  color: #7e88c3;
+  padding: 10px;
+  border-radius: 24px;
+  border: none;
+  margin: 0 8px;
+}
+
+.ButtonsCreate .Discard:hover {
+  background-color: #dfe3fa;
+}
+
+@media (max-width: 550px) {
+  .ButtonsCreate .Discard {
+    width: 84px;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 550px) {
+  .ButtonsCreate {
+    margin-left: 0;
+    margin-right: 0px;
+  }
+}
+
+.GroupButtons .SaveDraft {
+  width: 133px;
+  height: 48px;
+  background: #373B53;
+  color: #888eb0;
+  padding: 10px;
+  border-radius: 24px;
+  border: none;
+  margin: 0 8px;
+}
+
+.GroupButtons .SaveDraft:hover {
+  background: #0c0e16;
+}
+
+@media (max-width: 550px) {
+  .GroupButtons .SaveDraft {
+    width: 117px;
+    margin-top: 16px;
+  }
+}
+
+.GroupButtons .SaveSend {
+  width: 128px;
+  height: 48px;
+  background: #7c5dfa;
+  color: #fefefe;
+  margin-left: 8px;
+  padding: 10px;
+  border-radius: 24px;
+  border: none;
+  margin: 0 8px;
+}
+
+.GroupButtons .SaveSend:hover {
+  background: #9277ff;
+}
+
+@media (max-width: 550px) {
+  .GroupButtons .SaveSend {
+    margin-left: 0px;
+    margin-top: 16px;
+    width: 117px;
+  }
+}
+
+@media (max-width: 650px) {
+  .GroupButtons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 550px) {
+  .GroupButtons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* DARK MODE CONTAINER */
+.Dark .SaveDraft {
+  color: #dfe3fa;
+}
+
+.Dark .SaveDraft:hover {
+  background: #1e2139;
+}
+/*# sourceMappingURL=ButtonsCreate.module.css.map */

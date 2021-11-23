@@ -1,0 +1,102 @@
+@import '../../variables';
+
+//Mixins For Responsivnes
+
+@mixin breakpoint650 {
+    @media (max-width: #{$breakPoint650}) {
+        @content;
+    }
+}
+
+@mixin breakpoint550 {
+    @media (max-width: #{$breakPoint550}) {
+        @content;
+    }
+}
+
+//Button Group Container
+.ButtonsCreate {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 156px;
+    margin-right: 60px;
+    justify-content: space-between;
+    & .Discard {
+        width: 96px;
+        height: 48px;
+        background: $colorEleven;
+        color: $colorSeven;
+        padding: $common10;
+        border-radius: $common24;
+        border: none;
+        margin: 0 $common8;
+        &:hover {
+            background-color: $colorFive;
+        }
+        @include breakpoint550() {
+            width: 84px;
+            margin-top: $common16;
+        }
+    }
+    @include breakpoint550() {
+        margin-left: 0;
+        margin-right: $common0;
+    }
+  }
+
+.GroupButtons {
+    & .SaveDraft {
+        width: 133px;
+        height: 48px;
+        background: $colorThirten;
+        color: $colorSix;
+        padding: $common10;
+        border-radius: $common24;
+        border: none;
+        margin: 0 $common8;
+        &:hover {
+            background: $colorEight;
+        }
+        @include breakpoint550() {
+            width: 117px;
+            margin-top: $common16;
+        }
+    }
+    & .SaveSend {
+        width: 128px;
+        height: 48px;
+        background: $colorOne;
+        color: $basicWhite;
+        margin-left: $common8;
+        padding: $common10;
+        border-radius: $common24;
+        border: none;
+        margin: 0 $common8;
+        &:hover {
+            background: $colorTwo;
+        }
+        @include breakpoint550() {
+            margin-left: $common0;
+            margin-top: $common16;
+            width: 117px;
+        }
+    }
+    @include breakpoint650() {
+        display: flex;
+    }
+    @include breakpoint550() {
+        display: flex;
+    }
+}
+  
+/* DARK MODE CONTAINER */
+  
+.Dark {
+    & .SaveDraft {
+        color: $colorFive;
+        &:hover {
+            background: $colorThree;
+        }
+    }
+}

@@ -1,0 +1,151 @@
+@import '../../variables';
+
+//Mixins For Responsivnes
+
+@mixin breakpoint600 {
+  @media (max-width: #{$breakPoint600}) {
+      @content;
+  }
+}
+
+//Global Filter, Button & Navigation Container
+.Nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: $common72;
+  @include breakpoint600() {
+    margin-top: $common48;
+  }
+}
+
+.Title {
+  & p {
+    color: $colorSix;
+    margin-top: $common8;
+  }
+  & h1 {
+    font-size: $common32;
+    @include breakpoint600() {
+      font-size: $common20;
+    }
+  }
+}
+
+.Buttons {
+  display: flex;
+  position: relative;
+  cursor: url('../../Assets/pointer.png'), pointer;
+  & .TextDesktop {
+    font-size: $common14;
+  }
+}
+
+.Filter, .NewInvoice {
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  cursor: url('../../Assets/pointer.png'), pointer;
+}
+
+.TextMobile {
+  display: none;
+  @include breakpoint600() {
+    display: inherit;
+  }
+}
+
+.TextDesktop {
+  @include breakpoint600() {
+    display: none;
+  }
+}
+
+//Filter Button Styling & Animation Arrow
+.Filter {
+  & p {
+    letter-spacing: -0.25px;
+    font-size: $common12;
+    line-height: $common15;
+    margin-right: $common16;
+    font-weight: $weight700;
+  }
+  & span {
+    transition: 0.3s;
+    &.ArrowActive {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+//New Invoice Button Styling Container
+.NewInvoice {
+  display: flex;
+  background: $colorOne;
+  padding: $common8;
+  border-radius: 50px;
+  margin-left: $common32;
+  transition: background 0.3s;
+  &:hover {
+    background: $colorTwo;
+    & svg {
+      & path {
+        fill: $colorTwo;
+      }
+    }
+  }
+  & p {
+    margin-top: $common2;
+    font-weight: $weight700;
+    color: $basicWhite;
+    padding-right: $common12;
+  }
+  @include breakpoint600() {
+    padding: $common6;
+    margin-left: $common16;
+  }
+}
+
+.NewIcon {
+  width: 32px;
+  height: 32px;
+  background: $basicWhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: $common16;
+  @include breakpoint600() {
+    margin-right: $common8;
+  }
+}
+
+/* DARK MODE CONTAINER */ 
+.Title h1,
+.Title p,
+.Filter p {
+  transition: 0.3s;
+}
+.Dark {
+  & .Title {
+    & h1 {
+      color: $basicWhite;
+    }
+  }
+}
+.Dark {
+  & .Title {
+    & p {
+      color: $colorFive;
+    }
+  }
+}
+.Dark {
+  & .Filter {
+    & p {
+      color: $basicWhite;
+    }
+  }
+}

@@ -1,0 +1,166 @@
+@import './../../variables';
+
+//Mixins For Responsivnes
+
+@mixin breakpoint650 {
+    @media (max-width: #{$breakPoint650}) {
+        @content;
+    }
+}
+
+@mixin breakpoint600 {
+    @media (max-width: #{$breakPoint600}) {
+        @content;
+    }
+}
+
+//Status Global Container
+.Status {
+    width: 100%;
+    margin-top: $common48;
+}
+
+.GoBack {
+    display: flex;
+    align-items: center;
+    font-size: $common12;
+    line-height: $common15;
+    letter-spacing: -0.25px;
+    text-decoration: none;
+    color: $colorEight;
+    font-weight: $weight700;
+    transition: 0.3s;
+    &:hover {
+        color: $colorOne;
+    }
+    & svg {
+        margin-right: $common24;
+        margin-top: -2px;
+    }
+}
+
+//Status Nav Container
+.StatusNav {
+    background: $basicWhite;
+    padding: $common20 $common32;
+    border-radius: $common8;
+    box-shadow: $common0 $common10 $common10 -10px $darkModeBoxShadow;
+    margin-top: $common32;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: animaStatus forwards 0.3s;
+    transition: background 0.3s;
+    @include breakpoint600() {
+        padding: $common20 $common20;
+    }
+}
+@keyframes animaStatus {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+.StatusCurrent {
+    display: flex;
+    align-items: center;
+    & .Title {
+        color: $colorSix;
+        margin-right: $common16;
+    }
+    @include breakpoint650() {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+//Buttons Container
+.ButtonsStatus {
+    @include breakpoint650() {
+        display: none;
+    }
+}
+.Edit {
+    width: 73px;
+    height: 48px;
+    background: $colorEleven;
+    color: $colorSeven;
+    padding: $common10;
+    border-radius: $common24;
+    border: none;
+    &:hover {
+        background: $colorFive;
+    }
+}
+
+.Delete {
+    width: 89px;
+    height: 48px;
+    padding: $common10;
+    border-radius: $common24;
+    border: none;
+    margin: 0 $common8;
+    background: $colorNine;
+    color: $basicWhite;
+    &:hover {
+        background: $colorTen;
+    }
+}
+
+.MarkAsPaid {
+    width: 131px;
+    height: 48px;
+    background: $colorOne;
+    color: $basicWhite;
+    padding: $common10;
+    border-radius: $common24;
+    border: none;
+    &:hover {
+        background: $colorTwo;
+    }
+}
+
+/* DARK MODE CONTAINER */
+.Dark {
+    & .GoBack {
+        color: $basicWhite;
+        &:hover {
+            color: $colorSix;
+        }
+    }
+    & .StatusNav {
+        background: $colorThree;
+        & .Title {
+            color: $colorFive;
+        }
+    }
+    & .Edit {
+        background: $colorFour;
+        color: $colorFive;
+        &:hover {
+            background: $basicWhite;
+            color: $colorSeven;
+        }
+    }
+}
+
+//Mobile Container
+.ButtonsStatusMobile {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    background: $basicWhite;
+    width: 100vw;
+    z-index: 90;
+    padding: $common20 0;
+    display: none;
+    justify-content: center;
+    &:hover {
+        background: $colorThree;
+    }
+    @include breakpoint650() {
+        display: flex;
+    }
+}

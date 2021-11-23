@@ -1,0 +1,311 @@
+.Info {
+  width: 100%;
+  margin-top: 24px;
+  border-radius: 8px;
+  padding: 48px;
+  background: #fefefe;
+  -webkit-box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.1);
+          box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.1);
+  margin-bottom: 72px;
+}
+
+.Info b {
+  color: #0c0e16;
+}
+
+.Info ul {
+  list-style: none;
+}
+
+.Info ul li {
+  margin-bottom: 4px;
+}
+
+.Info p {
+  color: #7e88c3;
+}
+
+@media (max-width: 600px) {
+  .Info {
+    padding: 24px;
+  }
+}
+
+.InfoHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.InfoHeader .InfoHeaderItem1 h3 span {
+  color: #888eb0;
+}
+
+.InfoHeader .InfoHeaderItem1 p {
+  margin-top: 8px;
+}
+
+.InfoHeader .InfoHeaderItem2 ul {
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .InfoHeader .InfoHeaderItem2 ul {
+    text-align: start;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .InfoHeader {
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.InfoBody {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1.1fr;
+      grid-template-columns: 1fr 1fr 1.1fr;
+  margin-top: 16px;
+}
+
+.InfoBody b {
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.3125px;
+}
+
+.InfoBody .Date b {
+  display: block;
+  margin-bottom: 32px;
+}
+
+.InfoBody .BillTo b {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.InfoBody .Date p, .InfoBody .BillToTitle, .InfoBody .SentTo p {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  .InfoBody {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr auto;
+        grid-template-rows: 1fr auto;
+  }
+}
+
+.InvoiceItems {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 24px;
+}
+
+.InvoiceItems .Items {
+  padding: 32px 32px 40px 32px;
+  background: #f8f8fb;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.InvoiceItems .Items .ItemsHeader {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.25fr 0.25fr 0.75fr 1fr;
+      grid-template-columns: 1.25fr 0.25fr 0.75fr 1fr;
+  gap: 8px;
+}
+
+.InvoiceItems .Items .ItemsHeader .TextAlignCenter {
+  text-align: center;
+}
+
+.InvoiceItems .Items .ItemsHeader .TextAlignRight {
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .InvoiceItems .Items {
+    display: none;
+  }
+}
+
+.ItemBody {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.25fr 0.25fr 0.75fr 1fr;
+      grid-template-columns: 1.25fr 0.25fr 0.75fr 1fr;
+  font-size: 12px;
+  margin-top: 32px;
+  gap: 8px;
+}
+
+.ItemBody .TextAlignCenter {
+  text-align: center;
+}
+
+.ItemBody .TextAlignRight {
+  text-align: right;
+}
+
+.ItemBody b {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ItemBody b.QTYPriceColor {
+  color: #7e88c3;
+}
+
+.Total {
+  padding: 24px 32px;
+  background-color: #373B53;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.Total p {
+  color: #fefefe;
+}
+
+.Total b {
+  font-size: 24px;
+  line-height: 32px;
+  text-align: right;
+  letter-spacing: -0.5px;
+  color: #fefefe;
+}
+
+@media (max-width: 600px) {
+  .Total b {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Total {
+    padding: 24px;
+  }
+}
+
+/* DARK MODE CONTAINER */
+.Info.Dark {
+  background: #1e2139;
+}
+
+.Info.Dark b {
+  color: #fefefe;
+}
+
+.Info.Dark .InfoHeaderItem1 h3 {
+  color: #fefefe;
+}
+
+.Dark.Info p {
+  color: #dfe3fa;
+}
+
+.Dark .Items {
+  background: #252945;
+}
+
+.Dark b.QTYPriceColor {
+  color: #dfe3fa;
+}
+
+.Dark .Total {
+  background: #0c0e16;
+}
+
+.Dark .Total p {
+  color: #fefefe;
+}
+
+.ItemsMobile {
+  display: none;
+  padding: 24px 24px 0;
+  background: #f8f8fb;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ItemsMobile .ItemMobileBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .ItemsMobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.ItemsMobileBody1 h4 {
+  color: #0c0e16;
+}
+
+.ItemsMobileBody1 p {
+  font-weight: 700;
+  color: #7e88c3;
+  margin-top: 8px;
+}
+
+.ItemsMobileBody2 p {
+  font-weight: 700;
+  color: #0c0e16;
+}
+
+.Dark .ItemsMobile {
+  background: #252945;
+}
+
+.Dark .ItemsMobileBody1 h4 {
+  color: #fefefe;
+}
+
+.Dark .ItemsMobileBody1 p {
+  color: #888eb0;
+}
+
+.Dark .ItemsMobileBody2 p {
+  color: #fefefe;
+}
+/*# sourceMappingURL=Info.module.css.map */
